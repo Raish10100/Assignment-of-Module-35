@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Genrator App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./output.css"> 
+    <!-- CSS -->
+</head>
+<body class="bg-[#1b1b3a] flex justify-center items-center w-[100vw] h-[100vh]">
+    <div class="main-container border-[2px] border-gray-500 rounded-lg px-[80px] py-[20px] w-[600px] flex flex-col justify-center items-center gap-[15px] text-[#ffffffbf]">
+        <h1 class="text-[35px] text-center font-bold ">Password Generator</h1>
+        <input type="number" name="" id="" placeholder="Click on Generate button" class="w-[90%] py-[3px] px-[15px] text-gray-500  text-[20px] rounded-md ">
+        <div class="btn flex items-center gap-[15px] py-[25px]">
+            <button class="px-[30px] py-[7px] rounded-md bg-[#9881ff] hover:bg-[#9881ffb5] font-bold text-[20px]">Generate</button>
+            <button class="px-[20px] py-[7px] rounded-md bg-[#9881ff] hover:bg-[#9881ffb5] font-bold text-[20px]">Copy To Clipboard</button>
+        </div>
+        <div class="password-complexity-feature flex flex-col justify-center items-center w-[100%] gap-[10px]">
+            <div class="password-length flex justify-between w-[100%]">
+                <p class="text-[20px]">Password Length</p>
+                <input type="number" class="w-[80px] p-[3px] bg-gray-900 rounded-md border-[1px] border-gray-600">
+            </div>
+            <div class="uppercase-letters flex justify-between w-[100%]">
+                <p class="text-[20px]">Include uppercase letters</p>
+                <input type="checkbox">
+            </div>
+            <div class="lowercase-letters flex justify-between w-[100%]">
+                <p class="text-[20px]">Include lowercase letters</p>
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="numbers flex justify-between w-[100%]">
+                <p class="text-[20px]">Include numbers</p>
+                <input type="checkbox">
+            </div>
+            <div class="sumbols flex justify-between w-[100%]">
+                <p class="text-[20px]">Include symbols</p>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
