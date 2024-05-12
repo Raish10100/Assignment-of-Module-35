@@ -5,6 +5,12 @@ let output_password_box = document.querySelector('#output-password');
 let generate_btn = document.querySelector('#generate-btn')
 let copy_btn = document.querySelector('#copy-btn');
 
+// show error
+let show_error = document.querySelector('#show-error')
+
+// show copied message
+let copied_message = document.querySelector('#copied-message')
+
 // password complexity features inputbox
 let password_length_input = document.querySelector('#password-length')
 let uppercase_letters_input = document.querySelector('#uppercase-letters')
@@ -109,7 +115,7 @@ function defaultGenratePassword(length){
 function copyToClipboard(){
     const copyText = randomPassword ? randomPassword : finalPassword;
     navigator.clipboard.writeText(copyText);
-    alert('Copied to Clipboard')
+    copied_message.innerHTML = "copied ✅";
 }
 
 
@@ -119,17 +125,26 @@ function copyToClipboard(){
 
 // event listener on generate button
 generate_btn.addEventListener("click", () => {
-
+    show_error.innerHTML = "";
+    copied_message.innerHTML = ""
     const passwordLength = password_length_input.value;
     
     if (passwordLength >= 8 && passwordLength <= 20) {
-        generatePassword(passwordLength);
-    } else {
+        if(!uppercase_letters_input.checked && !lowercase_letters_input.checked && !numbers_input.checked && !special_characters_input.checked){
+            show_error.innerHTML = "Select Atleast One Complexity";
+        }else{
+            generatePassword(passwordLength);
+        }
+    } 
+    else if(passwordLength > 0 && (passwordLength < 8 || passwordLength > 20)){
+      show_error.innerHTML = "Enter Password Length between 8 and 20 characters !!"  
+    }
+    else {
         if(passwordLength == 0 &&(!uppercase_letters_input.checked && !lowercase_letters_input.checked && !numbers_input.checked && !special_characters_input.checked)){
             defaultGenratePassword(8)
         }
         else{
-            alert("Enter Password Length between 8  and 20")
+            show_error.innerHTML = "Enter Password Length !!";
         }
     }
 });

@@ -9,10 +9,12 @@
     <!-- CSS -->
 </head>
 <body class="bg-[#1b1b3a] flex justify-center items-center w-[100vw] h-[100vh]">
-    <div class="main-container border-[2px] border-gray-500 rounded-lg mx-[15px] px-[10px] vs:mx-[20px] vs:px-[20px] mt-[-60px] py-[20px] vs:mt-0 sm:px-[80px] vs:py-[20px] w-[600px] flex flex-col justify-center items-center gap-[15px] text-[#ffffffbf]">
+    <div class="main-container border-[2px] border-gray-500 rounded-lg mx-[15px] px-[10px] vs:mx-[20px] vs:px-[20px] mt-[-10px] py-[20px] vs:mt-0 sm:px-[80px] vs:py-[20px] w-[600px] flex flex-col justify-center items-center gap-[15px] text-[#ffffffbf]">
         <h1 class="text-[35px] text-center font-bold ">Password Generator</h1>
-        <input type="" name="" id="output-password" readonly  placeholder="Click on Generate button" class="w-[90%] py-[3px] px-[15px] text-gray-500  text-[20px] rounded-md ">
-        <div class="btn flex items-center flex-col vs:flex-row gap-[15px] py-[25px]">
+        <input type="" name="" id="output-password" readonly  placeholder="Click on Generate button" class="w-[90%] pt-[3px] px-[15px] text-gray-500  text-[20px] rounded-md ">
+        <span id="show-error" class="text-red-700 text-center"></span>
+        <span id="copied-message" class="text-green-400 text-center"></span>
+        <div class="btn flex items-center flex-col vs:flex-row vs:mt-[0px]  gap-[15px] pb-[25px]">
             <button id="generate-btn" class="px-[30px] py-[7px] rounded-md bg-[#9881ff] hover:bg-[#9881ffb5] font-bold text-[20px]">Generate</button>
             <button id="copy-btn" onclick="copyToClipboard()" class="px-[20px] py-[7px] rounded-md bg-[#9881ff] hover:bg-[#9881ffb5] font-bold text-[20px]">Copy To Clipboard</button>
         </div>
