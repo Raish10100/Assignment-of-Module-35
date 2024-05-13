@@ -25,7 +25,7 @@ let uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', '
 let lowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let numbers = ['1', '2','3','4','5','6','7','8','9', '0']
 const specialCharacters = [
-    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-',  '{', '}', '[', ']', '|', '\\', '\'', '<', '>', ',', '.', '?', '/'
+    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '{', '}', '[', ']', '|', '\\', '\'', '<', '>', ',', '.', '?', '/'
 ];
 
 
@@ -99,7 +99,7 @@ output_password_box.value = finalPassword; // final password printed in output b
 }
 
 
-// if user don't want to include any complexity in password then this function will call.
+// if user don't want to include any complexity in password then this function will call and create 8 digit password where all char will be number
 let randomPassword = "";
 function defaultGenratePassword(length){
     randomPassword = ""
@@ -113,7 +113,9 @@ function defaultGenratePassword(length){
 
 // this function will copy password in clipboard
 function copyToClipboard(){
-    const copyText = randomPassword ? randomPassword : finalPassword;
+    const copyText = output_password_box.value
+//   navigator.clipboard.writeText(resultEl.textContent);
+
     navigator.clipboard.writeText(copyText);
     copied_message.innerHTML = "copied ✅";
 }
