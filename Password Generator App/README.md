@@ -41,7 +41,7 @@ The Password Generator is a simple yet powerful tool designed to help you create
 Contributions to the Password Generator project are welcome! If you have any suggestions for improvements, bug fixes, or new features, please feel free to submit a pull request.
 
 ### License
-This project is licensed under the MIT License. See the [LICENSE]() file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Raish10100/Assignmen-Module-35/blob/main/LICENSE) file for details.
 
 ### Contact
 For any inquiries and problem related to the Password Generator, please [contact me](https://linktr.ee/Raish101001)
